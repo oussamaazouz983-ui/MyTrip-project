@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTrip ✈️ | Find Your Perfect Destination Within Your Budget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="travel.css">
+</head>
+
+<body>
+    <div class="bg-dots" id="bg-dots"></div>
+    <div class="waves"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo pulse">
+                <i class="fas fa-plane"></i>
+            </div>
+            <h1>MyTrip ✈️</h1>
+            <p class="tagline">
+                Discover amazing travel destinations that fit your budget. Choose your destination, set your budget, and
+                let us find the best options for you!
+            </p>
+        </header>
+
+        <main>
+            <section class="search-card">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="destination"><i class="fas fa-map-marker-alt"></i> Destination</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-globe"></i>
+                            <select id="destination">
+                                <option value="">Select a country or type any destination</option>
+                                <option value="all">All Destinations Worldwide</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Dubai">Dubai, UAE</option>
+                                <option value="Egypt">Egypt</option>
+                                <option value="Greece">Greece</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Japan">Japan</option>
+                                <option value="South Korea">South Korea</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="budget"><i class="fas fa-wallet"></i> Budget (USD)</label>
+                        <div class="slider-container">
+                            <input type="range" id="budget" class="budget-slider" min="500" max="10000" step="100"
+                                value="2500">
+                            <div class="budget-display">
+                                <span class="budget-value" id="budget-value">$2,500</span>
+                                <span class="budget-range">$500 - $10,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="search-btn" id="search-button">
+                    <i class="fas fa-search"></i>
+                    <span>Search for Trips</span>
+                </button>
+            </section>
+
+            <section class="results-section" id="results-section">
+                <div class="section-header">
+                    <h2 class="section-title">Suggested Destinations</h2>
+                    <span class="results-count" id="results-count">0 results</span>
+                </div>
+
+                <div class="results-grid" id="results-grid">
+                </div>
+
+                <div class="empty-state" id="empty-state" style="display: none;">
+                    <i class="fas fa-compass"></i>
+                    <h3>No Results Found</h3>
+                    <p>Try increasing your budget or changing the destination. You can also try searching in "All
+                        Destinations Worldwide"</p>
+                    <button class="suggest-btn" id="show-all-btn">
+                        <i class="fas fa-globe-americas"></i> Show All Destinations
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="travel.js"></script>
+</body>
+
+</html>
